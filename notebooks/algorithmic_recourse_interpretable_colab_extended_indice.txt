@@ -1,0 +1,30 @@
+Indice del notebook: algorithmic_recourse_interpretable_colab_extended.ipynb
+
+1. Algorithmic Recourse
+2. 1. Importar librerias
+3. 2. Crear un dataset sintetico
+4. 3. Entrenar un modelo interpretable
+5. 4. Interpretar el modelo
+6. 5. Elegir un caso rechazado para hacer recourse
+7. 6. Definir accion, restricciones y costo
+8. Definicion de reglas de actionability
+9. 7. Buscar recourse por fuerza bruta explicable
+10. Funciones de recourse y lectura de los resultados
+11. 8. Mostrar el recourse de forma interpretable
+12. Resumen simple del recourse e interpretacion de los resultados
+13. 9. Ver varias alternativas, no solo una
+14. 10. Explicar por que funciona el cambio
+15. Explicacion de contribuciones al score y lectura de los resultados
+16. 11. Visualizacion sencilla del antes y despues
+17. 12. Extension temporal: el recourse puede vencerse
+18. Chequeo temporal del recourse e interpretacion de los resultados
+19. 13. Introducir plausibilidad y accion parcial
+20. Restricciones de plausibilidad y busqueda de recourse filtrado
+21. 14. Evaluacion en lote sobre varios casos rechazados
+22. 16. Robustez temporal en lote
+23. Instalar y correr DiCE sobre tu caso actual
+24. Calcular costo de los contrafactuales de DiCE con tu misma metrica
+25. Comparar el mejor recourse manual vs el mejor contrafactual de DiCE
+26. Ver exactamente que cambia en el mejor contrafactual de DiCE
+
+Nota: La numeracion del notebook salta de la seccion 14 a la 16; no aparece una seccion 15 como encabezado.
