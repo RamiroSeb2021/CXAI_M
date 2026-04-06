@@ -58,3 +58,7 @@ htmlcov/
 
 # OS
 Thumbs.db
+
+# GitHub Copilot / Agent config (local)
+.github/
+AGENTS_plantilla.md

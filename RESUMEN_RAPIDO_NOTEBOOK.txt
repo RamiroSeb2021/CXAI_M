@@ -1,0 +1,127 @@
+================================================================================
+RESUMEN RÁPIDO - EJECUCIÓN NOTEBOOK
+================================================================================
+
+ARCHIVO: notebooks/algorithmic_recourse_interpretable_colab_extended.ipynb
+FECHA: 2026-04-05
+RESULTADO: ❌ 3 EXITOSAS / 19 ERRORES (13% de éxito)
+
+================================================================================
+ESTADO DE CELDAS
+================================================================================
+
+BLOQUE PREPARACIÓN (1-6)
+  ✅ Celda 1:  Importar librerías
+  ❌ Celda 2:  Cargar datos (FileNotFoundError: ../data/archive/adult.csv)
+  ❌ Celda 3:  Limpieza de datos (NameError: df_raw)
+  ❌ Celda 4:  Entrenar modelo (NameError: df)
+  ❌ Celda 5:  Coeficientes (NameError: model)
+  ❌ Celda 6:  Seleccionar caso (NameError: X_test)
+
+BLOQUE RECOURSE MANUAL (7-12)
+  ✅ Celda 7:  Definir reglas de accionabilidad
+  ❌ Celda 8:  Funciones de recourse (NameError: person)
+  ❌ Celda 9:  Resumen humano (NameError: best_recourse)
+  ❌ Celda 10: Alternativas (NameError: person)
+  ❌ Celda 11: Explicar contribuciones (NameError: model)
+  ❌ Celda 12: Gráfico antes/después (NameError: person)
+
+BLOQUE P5 Y DICE (13-22)
+  ❌ Celda 13: P5-12 Temporal (NameError: best_recourse)
+  ❌ Celda 14: P5-13 Plausibilidad (NameError: person)
+  ❌ Celda 15: P5-14 Lote (NameError: rejected)
+  ❌ Celda 16: P5-14 Costos (NameError: batch_free)
+  ❌ Celda 17: P5-16 Robustez (NameError: rejected)
+  ❌ Celda 18: P5-16 Patrones (NameError: temporal_df)
+  ❌ Celda 19: DiCE Install (SyntaxError: !pip)
+  ❌ Celda 20: DiCE Evaluación (NameError: dice_df)
+  ❌ Celda 21: DiCE Comparación (NameError: best_recourse)
+  ✅ Celda 22: DiCE Resumen (OK - maneja caso vacío)
+
+================================================================================
+PROBLEMAS RAÍZ
+================================================================================
+
+1. CELDA 2 - FileNotFoundError (CRÍTICO)
+   Causa: Ruta relativa '../data/archive/adult.csv' inválida
+   Impacto: Cascada que bloquea TODO (17 celdas)
+   Solución: Cambiar a '../../data/archive/adult.csv' o ejecutar desde notebooks/
+
+2. CELDA 19 - SyntaxError (ESPECIAL)
+   Causa: '!pip install dice-ml' no es ejecutable con exec()
+   Impacto: Bloquea DiCE (3 celdas más)
+   Solución: Cambiar a subprocess.run() o usar jupyter nbconvert
+
+================================================================================
+ESTADO P5 (SECCIONES OBLIGATORIAS)
+================================================================================
+
+P5-12: Extensión temporal           ❌ BLOQUEADO (Celda 13)
+P5-13: Plausibilidad                ❌ BLOQUEADO (Celda 14)
+P5-14: Evaluación en lote            ❌ BLOQUEADO (Celdas 15-16)
+P5-16: Robustez temporal en lote     ❌ BLOQUEADO (Celdas 17-18)
+P5-DiCE: Contrafactuales             ❌ BLOQUEADO (Celdas 19-21)
+
+================================================================================
+PLAN DE ACCIÓN
+================================================================================
+
+PASO 1 (Crítico): Reparar Celda 2
+  [ ] Cambiar ruta: "../data/archive/adult.csv" → "../../data/archive/adult.csv"
+  [ ] O ejecutar desde: cd notebooks/
+  [ ] Verificar: df_raw se carga correctamente
+
+PASO 2 (Importante): Reparar Celda 19
+  [ ] Cambiar: !pip -q install dice-ml
+  [ ] Por: import subprocess; subprocess.run(["pip", "install", "-q", "dice-ml"])
+  [ ] O ejecutar con: poetry run jupyter nbconvert --execute --to notebook notebook.ipynb
+
+PASO 3: Reejecutar
+  [ ] Después de ambos pasos, 20+ celdas funcionarán
+  [ ] P5 completo será accesible
+  [ ] DiCE estará integrado
+
+================================================================================
+MÉTRICAS
+================================================================================
+
+Celdas totales:        22
+Celdas exitosas:        3 (13.6%)
+Celdas con error:      19 (86.4%)
+
+Errores:
+  - FileNotFoundError:  1 (root cause)
+  - NameError:         17 (cascade)
+  - SyntaxError:        1 (root cause)
+
+Bloqueadores clave: 2
+  - Celda 2 (afecta 17 celdas)
+  - Celda 19 (afecta 3 celdas)
+
+================================================================================
+NOTAS TÉCNICAS
+================================================================================
+
+✓ El archivo data/archive/adult.csv EXISTE (ubicación correcta verificada)
+✓ Celda 7 funciona (define diccionarios estáticos sin dependencias)
+✓ Celda 22 funciona (maneja gracefully caso vacío)
+✓ Todas las librerías importan correctamente
+✓ El notebook está bien estructurado en secciones lógicas
+
+⚠ Notebook diseñado para Google Colab (contiene !pip)
+⚠ Necesita adaptación para ejecución local
+⚠ Rutas relativas asumen contexto de ejecución específico
+
+================================================================================
+ARCHIVO DE REPORTE COMPLETO
+================================================================================
+
+Ruta: /Users/nucita30/Documents/ECI/10.Decimo_Semestre/CXAI_M/REPORTE_EJECUCION_NOTEBOOK.md
+
+Contiene:
+  - Análisis detallado de cada celda
+  - Cadena de dependencias visual
+  - Soluciones específicas
+  - Observaciones técnicas
+  - Plan paso a paso
+
