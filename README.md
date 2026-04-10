@@ -1,8 +1,14 @@
 # CXAI-M — Explainability in Machine Learning
 
 **Curso:** Explicabilidad en Inteligencia Artificial (XAI)  
-**Semestre:** 10.º  
 **Entrega principal:** 9 de abril de 2026
+
+**Integrantes:**
+- JUAN ANGEL ORTIZ ORTIZ
+- JUAN CAMILO ARELLANO VERGARA
+- JUAN SEBASTIAN RAMIREZ AYALA
+- MARÍA FERNANDA LIZCANO SOLANO
+- PAULA MELISSA MARTINEZ BARRERA
 
 Colección de notebooks y talleres que cubren técnicas de interpretabilidad de modelos ML: LIME, SHAP, algorithmic recourse, análisis de sesgo y robustez de explicaciones.
 
